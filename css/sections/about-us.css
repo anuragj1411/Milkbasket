@@ -98,3 +98,47 @@ p {
     background-color: var(--primary-color);
     color: var(--primary-color);
 }
+
+@media (max-width: 768px) {
+    .city {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+    }
+}
+
+@media (max-width: 480px) {
+    .city {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+    }
+}
+
+@media (max-width: 320px) {
+    .city {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-info {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+
+    .social-icons a {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 10px;
+        position: relative;
+    }
+}
