@@ -68,12 +68,14 @@
 
 @media(max-width:768px){
     .cards{
+        position: relative;
         width: 100%;
         flex-direction: column;
         flex-wrap: wrap;
     }
 
     .card{
+        position: relative;
         margin: 20px 0;
     }
 }
