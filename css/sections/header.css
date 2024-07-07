@@ -58,12 +58,13 @@
     
 }
 
-.navlist li img {
+.navlist li img, .navlist-mobile img {
     width: 24px;
     height: 24px;
     object-fit: contain;
   }
   
+
 .navlist-mobile {
     display: none;
     gap: 20px;
