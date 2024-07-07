@@ -105,6 +105,7 @@ p {
         flex-wrap: wrap;
         grid-template-columns: repeat(2, 1fr);
         position: relative;
+        justify-content: center;
     }
 }
 
@@ -137,8 +138,8 @@ p {
     .social-icons a {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         margin: 10px;
         position: relative;
+        justify-content: center;
     }
 }
