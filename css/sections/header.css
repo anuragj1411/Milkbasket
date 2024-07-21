@@ -1,50 +1,53 @@
-.header__nav{
+.header__nav {
     position: relative;
     top: 0;
     left: 0;
     display: flex;
-    overflow: hidden;
     width: 100%;
-    
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
 }
 
-.header__logo{
-    flex: 1;
+.header__logo {
     display: flex;
-    position: relative;
+    align-items: center;
     padding: 20px;
+    position: relative;
 }
 
-.header__logo-overlay{
+.header__logo-overlay {
     position: absolute;
     inset: 0;
     width: 100%;
     z-index: -1;
+    background: rgba(255, 255, 255, 0.5); 
 }
 
-.header__logo h4{
+.header__logo h4 {
     padding-left: 30px;
     font-weight: 700;
     font-size: 24px;
-    
     font-family: var(--playwrite-display);
     color: #00B09B;
     opacity: 0.8;
 }
 
 .navlist, .navlist-mobile {
-        width: 100%;
-        padding: 20px;
-        flex: 2;
-        display: flex;
-        align-self: flex-end;
-        justify-content: space-between;
-        gap: 40px;
-        list-style: none;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.navlist li{
-    
+.navlist {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.navlist li {
     font-weight: 400;
     font-family: var(--plus-jakarta-sans);
     color: var(--secondary-color);
@@ -52,24 +55,54 @@
     text-transform: uppercase;
     line-height: 20px;
     cursor: pointer;
-    
 }
 
-.navlist li:hover{
+.navlist li:hover {
     color: #00B09B;
-    
 }
 
 .navlist li img, .navlist-mobile img {
     width: 24px;
     height: 24px;
     object-fit: contain;
-  }
-  
+}
 
 .navlist-mobile {
     display: none;
+    align-items: center;
     gap: 20px;
-  
     position: relative;
-  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .navlist {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navlist {
+        display: none; /* Hide the desktop nav */
+    }
+    
+    .navlist-mobile {
+        display: flex; /* Show the mobile nav */
+    }
+
+    .header__logo h4 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo h4 {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    .navlist-mobile img {
+        width: 20px;
+        height: 20px;
+    }
+}

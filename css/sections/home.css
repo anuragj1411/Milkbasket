@@ -1,78 +1,101 @@
-.home{
-    padding-top: 70px;
+/* General styles for the home section */
+.home {
+    /* padding-top: 70px; */
     display: flex;
-    min-height: calc(100vh);
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: calc(100vh - 70px); /* Adjust for the height of the header */
     overflow: hidden;
     position: relative;
-    height: 100%;
     width: 100%;
     background-image: url(../sections/milk_glass_1.jpg);
     background-size: cover;
     background-position: center;
-    
-}
-
-/* .home-image{
-    flex: 1;
-    display: flex;
-    
-    position: relative;
-    z-index: 5;
-}
-
-.home-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-} */
-
-.home-content{
     color: #fff;
+    /* text-align: center; Center align text for better mobile view */
 }
 
-.home-content-info h1{
+.home-content {
+   
+    padding: 20px; /* Add padding for better mobile view */
+}
+
+.home-content-info h1 {
     font-family: var(--playwrite-display);
     font-size: 50px;
-    align-self: center;
     padding-top: 40px;
-    padding-left: 50px;
 }
 
-.home-content-info p{
-    padding-left: 50px ;
+.home-content-info p {
     font-size: 17px;
     font-family: var(--plus-jakarta-sans);
-    
-
+    margin-top: 20px; /* Add margin for better spacing */
 }
 
-.home-content-info p2{
+.home-content-info p2 {
     font-family: var(--plus-jakarta-sans);
-    padding-left: 50px;
     font-size: 17px;
     font-weight: bold;
     color: var(--primary-color);
-
+    margin-top: 20px; /* Add margin for better spacing */
 }
 
-
-
-@keyframes blink{
-    50%{
+@keyframes blink {
+    50% {
         opacity: 0;
     }
-    80%{
+    80% {
         opacity: 1;
     }
 }
 
-
-.home-content-info p1{
+.home-content-info p1 {
     color: var(--primary-color);
     animation: blink 2s linear infinite;
-
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .home-content-info h1 {
+        font-size: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
+    .home-content-info p,
+    .home-content-info p2 {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 16px;
+    }
+}
 
+@media (max-width: 768px) {
+    .home-content-info h1 {
+        font-size: 35px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
+    .home-content-info p,
+    .home-content-info p2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content-info h1 {
+        font-size: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .home-content-info p,
+    .home-content-info p2 {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+}
