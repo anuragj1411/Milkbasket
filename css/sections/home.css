@@ -40,6 +40,12 @@
     margin-top: 20px; /* Add margin for better spacing */
 }
 
+.Download-buttons{
+    padding-top: 25px;
+    border-radius: 2px;
+}
+
+
 @keyframes blink {
     50% {
         opacity: 0;
